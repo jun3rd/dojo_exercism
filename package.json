@@ -1,0 +1,44 @@
+{
+  "name": "dojo_exercism",
+  "version": "1.0.0",
+  "description": "exercism katas tracked on github",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "lint": "eslint",
+    "watch": "jest --watch ./*",
+    "start": "node src/index.js",
+    "test": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jun3rd/dojo_exercism.git"
+  },
+  "keywords": [
+    "exercism",
+    "katas"
+  ],
+  "author": "Jun Alvarado <jun3rd@gmail.com> (https://github.com/jun3rd)",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/jun3rd/dojo_exercism/issues"
+  },
+  "homepage": "https://github.com/jun3rd/dojo_exercism#readme",
+  "jest": {
+    "coverageDirectory": "public/coverage"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.19.0",
+    "@exercism/babel-preset-javascript": "^0.1.2",
+    "@exercism/eslint-config-javascript": "^0.6.0",
+    "@types/jest": "^29.0.2",
+    "@types/node": "^18.7.18",
+    "babel-jest": "^29.0.3",
+    "core-js": "^3.25.1",
+    "eslint": "^8.23.1",
+    "jest": "^29.0.3",
+    "jsdocs": "^0.0.1"
+  }
+}
