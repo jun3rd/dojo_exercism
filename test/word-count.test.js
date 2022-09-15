@@ -1,6 +1,6 @@
 import { countWords } from './word-count';
 
-describe('countWords', () => {
+describe.skip('countWords', () => {
   test('count one word', () => {
   // test('count one word', () => {
     const expectedCounts = { word: 1 };

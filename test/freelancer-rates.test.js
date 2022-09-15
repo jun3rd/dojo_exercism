@@ -8,7 +8,7 @@ import {
 
 const DIFFERENCE_PRECISION_IN_DIGITS = 6;
 
-describe('day rate', () => {
+describe.skip('day rate', () => {
   test('at 16/hour', () => {
     const actual = dayRate(16);
     expect(actual).toBe(128);
@@ -35,7 +35,7 @@ describe('day rate', () => {
   });
 });
 
-describe('days in budget', () => {
+describe.skip('days in budget', () => {
   describe('with a budget of 1280', () => {
     test('at 16/hour', () => {
       const actual = daysInBudget(1280, 16);
@@ -62,7 +62,7 @@ describe('days in budget', () => {
   });
 });
 
-describe('cost with monthly discount', () => {
+describe.skip('cost with monthly discount', () => {
   describe('at 16/hour', () => {
     test('for 70 days', () => {
       const actual = priceWithMonthlyDiscount(16, 70, 0);

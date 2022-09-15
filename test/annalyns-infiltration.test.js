@@ -5,7 +5,7 @@ import {
   canFreePrisoner,
 } from './annalyns-infiltration';
 
-describe('can execute fast attack', () => {
+describe.skip('can execute fast attack', () => {
   test('when the knight is awake', () => {
     const knightIsAwake = true;
     const expected = false;
@@ -21,7 +21,7 @@ describe('can execute fast attack', () => {
   });
 });
 
-describe('can spy', () => {
+describe.skip('can spy', () => {
   test('when everyone is asleep', () => {
     const knightIsAwake = false;
     const archerIsAwake = false;
@@ -100,7 +100,7 @@ describe('can spy', () => {
   });
 });
 
-describe('can signal prisoner', () => {
+describe.skip('can signal prisoner', () => {
   test('when everyone is asleep', () => {
     const archerIsAwake = false;
     const prisonerIsAwake = false;
@@ -134,7 +134,7 @@ describe('can signal prisoner', () => {
   });
 });
 
-describe('can free prisoner', () => {
+describe.skip('can free prisoner', () => {
   test('when everyone is asleep and pet dog is not present', () => {
     const knightIsAwake = false;
     const archerIsAwake = false;

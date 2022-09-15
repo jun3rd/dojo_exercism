@@ -11,7 +11,7 @@ import {
   checkSizeOfStack,
 } from './enchantments';
 
-describe('pick a card', () => {
+describe.skip('pick a card', () => {
   test('get the first card', () => {
     const stack = [1, 2, 3];
     const expected = 1;
@@ -34,7 +34,7 @@ describe('pick a card', () => {
   });
 });
 
-describe('sleight of hand', () => {
+describe.skip('sleight of hand', () => {
   test('replace the first card with a 7', () => {
     const stack = [1, 2, 3];
     const position = 0;
@@ -63,7 +63,7 @@ describe('sleight of hand', () => {
   });
 });
 
-describe('make cards appear at the top', () => {
+describe.skip('make cards appear at the top', () => {
   test('adding a second card at the top', () => {
     const stack = [1];
     const newCard = 5;
@@ -107,7 +107,7 @@ describe('make cards appear at the top', () => {
   });
 });
 
-describe('make cards disappear', () => {
+describe.skip('make cards disappear', () => {
   test('remove the card at the bottom', () => {
     const stack = [1, 2, 3, 4];
     const position = 0;
@@ -153,7 +153,7 @@ describe('make cards disappear', () => {
   });
 });
 
-describe('make the top card disappear', () => {
+describe.skip('make the top card disappear', () => {
   test('remove the only card from the top', () => {
     const stack = [1];
     const expected = [];
@@ -177,7 +177,7 @@ describe('make the top card disappear', () => {
   });
 });
 
-describe('make cards appear at the bottom', () => {
+describe.skip('make cards appear at the bottom', () => {
   test('adding a second card to the bottom', () => {
     const stack = [1];
     const newCard = 5;
@@ -221,7 +221,7 @@ describe('make cards appear at the bottom', () => {
   });
 });
 
-describe('make the bottom card disappear', () => {
+describe.skip('make the bottom card disappear', () => {
   test('remove the only card from the bottom', () => {
     const stack = [1];
     const expected = [];
@@ -245,7 +245,7 @@ describe('make the bottom card disappear', () => {
   });
 });
 
-describe('check your work', () => {
+describe.skip('check your work', () => {
   describe('an empty stack of cards', () => {
     test('has 0 cards', () => {
       const stack = [];
