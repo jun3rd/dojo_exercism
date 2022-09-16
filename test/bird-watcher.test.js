@@ -1,6 +1,6 @@
 import { totalBirdCount, birdsInWeek, fixBirdCountLog } from './bird-watcher';
 
-describe('totalBirdCount', () => {
+describe.skip('totalBirdCount', () => {
   test('calculates the correct total number of birds', () => {
     const birdsPerDay = [9, 0, 8, 4, 5, 1, 3];
     expect(totalBirdCount(birdsPerDay)).toBe(30);
@@ -18,7 +18,7 @@ describe('totalBirdCount', () => {
   });
 });
 
-describe('birdsInWeek', () => {
+describe.skip('birdsInWeek', () => {
   test('calculates the number of birds in the first week', () => {
     const birdsPerDay = [3, 0, 5, 1, 0, 4, 1, 0, 3, 4, 3, 0, 8, 0];
     expect(birdsInWeek(birdsPerDay, 1)).toBe(14);
@@ -45,7 +45,7 @@ describe('birdsInWeek', () => {
   });
 });
 
-describe('fixBirdCountLog', () => {
+describe.skip('fixBirdCountLog', () => {
   test('returns a bird count list with the corrected values', () => {
     const birdsPerDay = [3, 0, 5, 1, 0, 4, 1, 0, 3, 4, 3, 0];
     const expected = [4, 0, 6, 1, 1, 4, 2, 0, 4, 4, 4, 0];
