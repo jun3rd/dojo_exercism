@@ -7,15 +7,15 @@ import {
   normalizeScore,
 } from './high-score-board';
 
-describe.skip('createScoreBoard', () => {
-  xtest('creates a new board with a test entry', () => {
+describe('createScoreBoard', () => {
+  test('creates a new board with a test entry', () => {
     const expected = { 'The Best Ever': 1000000 };
     expect(createScoreBoard()).toEqual(expected);
   });
 });
 
-describe.skip('addPlayer', () => {
-  xtest('adds a player and score to the board', () => {
+describe('addPlayer', () => {
+  test('adds a player and score to the board', () => {
     const scoreBoard = {
       'Amil Pastorius': 99373,
       'Min-seo Shin': 0,
@@ -31,7 +31,7 @@ describe.skip('addPlayer', () => {
     expect(actual).toEqual(expected);
   });
 
-  xtest('returns the existing score board', () => {
+  test('returns the existing score board', () => {
     const scoreBoard = {};
     const actual = addPlayer(scoreBoard, 'Jesse Johnson', 1337);
 
@@ -41,8 +41,8 @@ describe.skip('addPlayer', () => {
   });
 });
 
-describe.skip('removePlayer', () => {
-  xtest('removes a player from the score board', () => {
+describe('removePlayer', () => {
+  test('removes a player from the score board', () => {
     const scoreBoard = {
       'Amil Pastorius': 99373,
       'Min-seo Shin': 0,
@@ -61,7 +61,7 @@ describe.skip('removePlayer', () => {
     expect(Object.is(actual, scoreBoard)).toBe(true);
   });
 
-  xtest('does nothing if the player is not on the board', () => {
+  test('does nothing if the player is not on the board', () => {
     const scoreBoard = {
       'Amil Pastorius': 99373,
       'Min-seo Shin': 0,
@@ -76,8 +76,8 @@ describe.skip('removePlayer', () => {
   });
 });
 
-describe.skip('updateScore', () => {
-  xtest("increases a player's score", () => {
+describe('updateScore', () => {
+  test("increases a player's score", () => {
     const scoreBoard = {
       'Amil Pastorius': 99373,
       'Min-seo Shin': 0,
@@ -99,8 +99,8 @@ describe.skip('updateScore', () => {
   });
 });
 
-describe.skip('applyMondayBonus', () => {
-  xtest('adds 100 points for all players', () => {
+describe('applyMondayBonus', () => {
+  test('adds 100 points for all players', () => {
     const scoreBoard = {
       'Amil Pastorius': 345,
       'Min-seo Shin': 19,
@@ -120,7 +120,7 @@ describe.skip('applyMondayBonus', () => {
     expect(Object.is(actual, scoreBoard)).toBe(true);
   });
 
-  xtest('does nothing if the score board is empty', () => {
+  test('does nothing if the score board is empty', () => {
     const scoreBoard = {};
     const actual = applyMondayBonus(scoreBoard);
     expect(actual).toEqual({});
@@ -130,8 +130,8 @@ describe.skip('applyMondayBonus', () => {
   });
 });
 
-describe.skip('normalizeScore', () => {
-  xtest('applies the normalization function', () => {
+describe('normalizeScore', () => {
+  test('applies the normalization function', () => {
     const params = {
       score: 45,
       normalizeFunction: function (score) {
@@ -142,7 +142,7 @@ describe.skip('normalizeScore', () => {
     expect(normalizeScore(params)).toEqual(125);
   });
 
-  xtest('works for different params', () => {
+  test('works for different params', () => {
     const params = {
       score: 2100,
       normalizeFunction: function (score) {
