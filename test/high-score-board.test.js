@@ -7,14 +7,14 @@ import {
   normalizeScore,
 } from './high-score-board';
 
-describe('createScoreBoard', () => {
+describe.skip('createScoreBoard', () => {
   test('creates a new board with a test entry', () => {
     const expected = { 'The Best Ever': 1000000 };
     expect(createScoreBoard()).toEqual(expected);
   });
 });
 
-describe('addPlayer', () => {
+describe.skip('addPlayer', () => {
   test('adds a player and score to the board', () => {
     const scoreBoard = {
       'Amil Pastorius': 99373,
@@ -41,7 +41,7 @@ describe('addPlayer', () => {
   });
 });
 
-describe('removePlayer', () => {
+describe.skip('removePlayer', () => {
   test('removes a player from the score board', () => {
     const scoreBoard = {
       'Amil Pastorius': 99373,
@@ -76,7 +76,7 @@ describe('removePlayer', () => {
   });
 });
 
-describe('updateScore', () => {
+describe.skip('updateScore', () => {
   test("increases a player's score", () => {
     const scoreBoard = {
       'Amil Pastorius': 99373,
@@ -99,7 +99,7 @@ describe('updateScore', () => {
   });
 });
 
-describe('applyMondayBonus', () => {
+describe.skip('applyMondayBonus', () => {
   test('adds 100 points for all players', () => {
     const scoreBoard = {
       'Amil Pastorius': 345,
@@ -130,7 +130,7 @@ describe('applyMondayBonus', () => {
   });
 });
 
-describe('normalizeScore', () => {
+describe.skip('normalizeScore', () => {
   test('applies the normalization function', () => {
     const params = {
       score: 45,
