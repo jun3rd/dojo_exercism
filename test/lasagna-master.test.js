@@ -8,7 +8,7 @@ import {
 
 const DIFFERENCE_PRECISION_IN_DIGITS = 6;
 
-describe('cookingStatus', () => {
+describe.skip('cookingStatus', () => {
   test('recognizes that there is time left on the timer', () => {
     const expected = 'Not done, please wait.';
     expect(cookingStatus(1)).toBe(expected);
@@ -28,7 +28,7 @@ describe('cookingStatus', () => {
   });
 });
 
-describe('preparationTime', () => {
+describe.skip('preparationTime', () => {
   test('applies the custom average time per layer', () => {
     const manyLayers = [
       'sauce',
@@ -76,7 +76,7 @@ describe('preparationTime', () => {
   });
 });
 
-describe('quantities', () => {
+describe.skip('quantities', () => {
   test('calculates the amounts of noodles and sauce correctly', () => {
     const fewLayers = ['noodles', 'sauce', 'noodles'];
     expectObjectsToBeEqual(quantities(fewLayers), { noodles: 100, sauce: 0.2 });
@@ -114,7 +114,7 @@ describe('quantities', () => {
   });
 });
 
-describe('addSecretIngredient', () => {
+describe.skip('addSecretIngredient', () => {
   test('adds the secret ingredient to the second array', () => {
     const friendsList = ['sauce', 'noodles', 'béchamel', 'marjoram'];
     const myList = ['sauce', 'noodles', 'meat', 'tomatoes'];
@@ -156,7 +156,7 @@ describe('addSecretIngredient', () => {
   });
 });
 
-describe('scaleRecipe', () => {
+describe.skip('scaleRecipe', () => {
   test('scales up correctly', () => {
     const recipe1 = {
       sauce: 0.5,
