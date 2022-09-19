@@ -1,6 +1,6 @@
 import { age } from './space-age';
 
-describe('Space Age', () => {
+describe.skip('Space Age', () => {
   test('age on Earth', () => {
     expect(age('earth', 1000000000)).toEqual(31.69);
   });
