@@ -7,7 +7,7 @@ import {
   costOf,
 } from './custom-signs';
 
-describe('buildSign', () => {
+describe.skip('buildSign', () => {
   test('occasion is Birthday', () => {
     expect(buildSign('Birthday', 'Jack')).toBe('Happy Birthday Jack!');
   });
@@ -17,7 +17,7 @@ describe('buildSign', () => {
   });
 });
 
-describe('buildBirthdaySign', () => {
+describe.skip('buildBirthdaySign', () => {
   test('age is less than 50', () => {
     expect(buildBirthdaySign(49)).toBe(
       'Happy Birthday! What a young fellow you are.'
@@ -37,7 +37,7 @@ describe('buildBirthdaySign', () => {
   });
 });
 
-describe('graduationFor', () => {
+describe.skip('graduationFor', () => {
   test('Robs graduation, 2021', () => {
     const expected = 'Congratulations Rob!\nClass of 2021';
     expect(graduationFor('Rob', 2021)).toBe(expected);
@@ -49,7 +49,7 @@ describe('graduationFor', () => {
   });
 });
 
-describe('costOf', () => {
+describe.skip('costOf', () => {
   test('sign is total of characters followed by the currency', () => {
     const sign = 'Happy Birthday!';
     const expected = 'Your sign costs 50.00 dollars.';
