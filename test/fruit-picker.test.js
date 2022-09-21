@@ -16,7 +16,7 @@ afterEach(() => {
   jest.resetAllMocks();
 });
 
-describe('task 1', () => {
+describe.skip('task 1', () => {
   test('onSuccess should call notify with a success message', () => {
     expect(onSuccess()).toEqual(undefined);
     expect(notify).toHaveBeenCalledTimes(1);
@@ -24,7 +24,7 @@ describe('task 1', () => {
   });
 });
 
-describe('task 2', () => {
+describe.skip('task 2', () => {
   test('onError should call notify with an error message', () => {
     expect(onError()).toEqual(undefined);
     expect(notify).toHaveBeenCalledTimes(1);
@@ -32,7 +32,7 @@ describe('task 2', () => {
   });
 });
 
-describe('task 3', () => {
+describe.skip('task 3', () => {
   test('order from grocer passes callback function arguments forward', () => {
     const query = { variety: 'apple', quantity: 10 };
     orderFromGrocer(query, onSuccess, onError);
@@ -41,7 +41,7 @@ describe('task 3', () => {
   });
 });
 
-describe('task 4', () => {
+describe.skip('task 4', () => {
   test('postOrder composes a request to the grocer using the defined callbacks', () => {
     const variety = 'banana';
     const quantity = 5;

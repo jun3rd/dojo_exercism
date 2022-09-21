@@ -15,7 +15,12 @@
  *  translated coordinate pair in the form [x, y]
  */
 export function translate2d(dx, dy) {
-  throw new Error('Implement the translate2d function');
+  return function(x, y) {
+    let x_dx = x+dx
+    let y_dy = y+dy
+    let coordinate_translated = [x_dx,y_dy]
+    return coordinate_translated
+  }
 }
 
 /**
@@ -29,7 +34,11 @@ export function translate2d(dx, dy) {
  *  scaled coordinate pair in the form [x, y]
  */
 export function scale2d(sx, sy) {
-  throw new Error('Implement the scale2d function');
+  return function(x,y) {
+    let x_new = x * sx
+    let y_new = y * sy
+    return [x_new, y_new]
+  }
 }
 
 /**
@@ -43,7 +52,9 @@ export function scale2d(sx, sy) {
  *  transformed coordinate pair in the form [x, y]
  */
 export function composeTransform(f, g) {
-  throw new Error('Implement the composeTransform function');
+  let step1 = f
+  let step2 = g
+  console.log(step1)
 }
 
 /**
