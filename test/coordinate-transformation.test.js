@@ -120,7 +120,7 @@ describe('memoizeTransform', () => {
      expect(memoizedTransform(5, 5)).toEqual([1, 1]);
    });
 
-   xtest('should only remember the last result', () => {
+   test('should only remember the last result', () => {
      const mockFunction = jest.fn((x, y) => [x * 2, y * 2]);
      const memoizedTransform = memoizeTransform(mockFunction);
      expect(memoizedTransform(1, 1)).toEqual([2, 2]);
