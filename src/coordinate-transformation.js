@@ -15,12 +15,7 @@
  *  translated coordinate pair in the form [x, y]
  */
 export function translate2d(dx, dy) {
-  return function(x, y) {
-    let x_dx = x+dx
-    let y_dy = y+dy
-    let coordinate_translated = [x_dx,y_dy]
-    return coordinate_translated
-  }
+	return (x,y) => [dx+x, dy+y]
 }
 
 /**
@@ -34,11 +29,7 @@ export function translate2d(dx, dy) {
  *  scaled coordinate pair in the form [x, y]
  */
 export function scale2d(sx, sy) {
-  return function(x,y) {
-    let x_new = x * sx
-    let y_new = y * sy
-    return [x_new, y_new]
-  }
+	return (x,y) => [sx*x, sy*y]
 }
 
 /**
@@ -52,9 +43,7 @@ export function scale2d(sx, sy) {
  *  transformed coordinate pair in the form [x, y]
  */
 export function composeTransform(f, g) {
-  let step1 = f
-  let step2 = g
-  console.log(step1)
+	return (x,y) => g(f(x,y)[0], f(x,y)[1])
 }
 
 /**
@@ -67,5 +56,18 @@ export function composeTransform(f, g) {
  *  if the arguments are the same on subsequent calls, or compute a new result if they are different.
  */
 export function memoizeTransform(f) {
-  throw new Error('Implement the memoizeTransform function');
+	let savedResult, savedX, savedY
+	return function(x,y) {
+		if (
+			x === savedX
+			&& y === savedY
+		) {
+			return savedResult // saved result
+		} else {
+			savedX = x
+			savedY = y
+			savedResult = f(x,y)
+			return savedResult
+		}
+	}
 }

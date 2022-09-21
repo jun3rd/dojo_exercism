@@ -18,7 +18,7 @@ const fakeTransform = () => {
   };
 };
 
-describe.skip('translate2d', () => {
+describe('translate2d', () => {
   test('should return a function', () => {
     expect(typeof translate2d(0, 0)).toBe('function');
   });
@@ -41,7 +41,7 @@ describe.skip('translate2d', () => {
   });
 });
 
-describe.skip('scale2d', () => {
+describe('scale2d', () => {
   test('should return a function', () => {
     expect(typeof scale2d(0, 0)).toBe('function');
   });
@@ -64,7 +64,7 @@ describe.skip('scale2d', () => {
   });
 });
 
-describe.skip('composeTransform', () => {
+describe('composeTransform', () => {
   const dx = -6;
   const dy = 10;
   const translator = translate2d(dx, dy);
@@ -81,51 +81,53 @@ describe.skip('composeTransform', () => {
     expect(composeTranslate(0, 0)).toEqual([-12, 20]);
   });
 
-  xtest('should compose two scale functions', () => {
+  test('should compose two scale functions', () => {
     const composeScale = composeTransform(scaler, scaler);
     expect(composeScale(1, 1)).toEqual([9, 4]);
   });
 
-  xtest('should compose in the correct order: g(f(x))', () => {
+  test('should compose in the correct order: g(f(x))', () => {
     const composed = composeTransform(scaler, translator);
     expect(composed(0, 0)).toEqual([-6, 10]);
   });
 
-  xtest('should compose in the opposite order: f(g(x))', () => {
+  test('should compose in the opposite order: f(g(x))', () => {
     const composed = composeTransform(translator, scaler);
     expect(composed(0, 0)).toEqual([-18, 20]);
   });
 });
 
-// describe.skip('memoizeTransform', () => {
-//   xtest('should return a function', () => {
-//     expect(typeof memoizeTransform(translate2d(0, 0))).toBe('function');
-//   });
+describe('memoizeTransform', () => {
+   test('should return a function', () => {
+     expect(typeof memoizeTransform(translate2d(0, 0))).toBe('function');
+   });
 
-//   xtest('should return the same result if given the same input', () => {
-//     const memoizedTranslate = memoizeTransform(translate2d(2, 2));
-//     expect(memoizedTranslate(2, 2)).toEqual([4, 4]);
-//     expect(memoizedTranslate(2, 2)).toEqual([4, 4]);
-//   });
+   test('should return the same result if given the same input', () => {
+     const memoizedTranslate = memoizeTransform(translate2d(2, 2));
+     expect(memoizedTranslate(2, 2)).toEqual([4, 4]);
+     expect(memoizedTranslate(2, 2)).toEqual([4, 4]);
+   });
 
-//   xtest('should return different results for different inputs', () => {
-//     const memoizedTranslate = memoizeTransform(translate2d(1, 2));
-//     expect(memoizedTranslate(2, 2)).toEqual([3, 4]);
-//     expect(memoizedTranslate(6, 6)).toEqual([7, 8]);
-//   });
+   test('should return different results for different inputs', () => {
+     const memoizedTranslate = memoizeTransform(translate2d(1, 2));
+     expect(memoizedTranslate(2, 2)).toEqual([3, 4]);
+     expect(memoizedTranslate(6, 6)).toEqual([7, 8]);
+   });
 
-//   xtest('should not call the memoized function if the input is the same', () => {
-//     const memoizedTransform = memoizeTransform(fakeTransform());
-//     expect(memoizedTransform(5, 5)).toEqual([1, 1]);
-//     expect(memoizedTransform(5, 5)).toEqual([1, 1]);
-//   });
+   test('should not call the memoized function if the input is the same', () => {
+     const memoizedTransform = memoizeTransform(fakeTransform());
+     expect(memoizedTransform(5, 5)).toEqual([1, 1]);
+     expect(memoizedTransform(5, 5)).toEqual([1, 1]);
+   });
 
-//   xtest('should only remember the last result', () => {
-//     const mockFunction = jest.fn((x, y) => [x * 2, y * 2]);
-//     const memoizedTransform = memoizeTransform(mockFunction);
-//     expect(memoizedTransform(1, 1)).toEqual([2, 2]);
-//     expect(memoizedTransform(2, 2)).toEqual([4, 4]);
-//     expect(memoizedTransform(1, 1)).toEqual([2, 2]);
-//     expect(mockFunction).toBeCalledTimes(3);
-//   });
-// });
+   xtest('should only remember the last result', () => {
+     const mockFunction = jest.fn((x, y) => [x * 2, y * 2]);
+     const memoizedTransform = memoizeTransform(mockFunction);
+     expect(memoizedTransform(1, 1)).toEqual([2, 2]);
+     expect(memoizedTransform(2, 2)).toEqual([4, 4]);
+     expect(memoizedTransform(1, 1)).toEqual([2, 2]);
+     expect(mockFunction).toBeCalledTimes(3);
+   });
+ });
+
+

@@ -9,7 +9,7 @@ import {
   getFirstEvenCardPosition,
 } from './enchantments-analytic';
 
-describe('getCardPosition', () => {
+describe.skip('getCardPosition', () => {
   test('when it is the first card', () => {
     expect(getCardPosition([1, 2, 3], 1)).toBe(0);
   });
@@ -18,7 +18,7 @@ describe('getCardPosition', () => {
   });
 });
 
-describe('doesStackIncludeCard', () => {
+describe.skip('doesStackIncludeCard', () => {
   test('when there is a card found', () => {
     expect(doesStackIncludeCard([1, 2, 3], 1)).toBe(true);
   });
@@ -27,7 +27,7 @@ describe('doesStackIncludeCard', () => {
   });
 });
 
-describe('isEachCardEven', () => {
+describe.skip('isEachCardEven', () => {
   test('when all cards are even', () => {
     expect(isEachCardEven([2, 4, 6])).toBe(true);
   });
@@ -36,7 +36,7 @@ describe('isEachCardEven', () => {
   });
 });
 
-describe('doesStackIncludeOddCard', () => {
+describe.skip('doesStackIncludeOddCard', () => {
   test('should be true if odd number card is found', () => {
     expect(doesStackIncludeOddCard([2, 5])).toBe(true);
   });
@@ -45,7 +45,7 @@ describe('doesStackIncludeOddCard', () => {
   });
 });
 
-describe('getFirstOddCard', () => {
+describe.skip('getFirstOddCard', () => {
   test('should return the first odd card found', () => {
     expect(getFirstOddCard([2, 4, 1, 3])).toBe(1);
   });
@@ -54,7 +54,7 @@ describe('getFirstOddCard', () => {
   });
 });
 
-describe('getFirstEvenCardPosition', () => {
+describe.skip('getFirstEvenCardPosition', () => {
   test('should return position of first even card', () => {
     expect(getFirstEvenCardPosition([2, 4, 1, 3])).toBe(0);
   });
