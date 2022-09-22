@@ -9,7 +9,7 @@ import {
 //} from './enchantments';
 } from './destructured-enchantments';
 
-describe('getFirstCard', () => {
+describe.skip('getFirstCard', () => {
   test('from a deck with a single card', () => {
     expect(getFirstCard([3])).toBe(3);
   });
@@ -23,7 +23,7 @@ describe('getFirstCard', () => {
   });
 });
 
-describe('getSecondCard', () => {
+describe.skip('getSecondCard', () => {
   test('from a deck with two cards', () => {
     expect(getSecondCard([10, 4])).toBe(4);
   });
@@ -41,7 +41,7 @@ describe('getSecondCard', () => {
   });
 });
 
-describe('swapTopTwoCards', () => {
+describe.skip('swapTopTwoCards', () => {
   test('in a deck with two cards', () => {
     expect(swapTopTwoCards([3, 6])).toStrictEqual([6, 3]);
   });
@@ -51,7 +51,7 @@ describe('swapTopTwoCards', () => {
   });
 });
 
-describe('discardTopCard', () => {
+describe.skip('discardTopCard', () => {
   test('from a deck with one card', () => {
     expect(discardTopCard([7])).toStrictEqual([7, []]);
   });
@@ -61,7 +61,7 @@ describe('discardTopCard', () => {
   });
 });
 
-describe('insertFaceCards', () => {
+describe.skip('insertFaceCards', () => {
   test('into a deck with many cards', () => {
     expect(insertFaceCards([3, 10, 7])).toStrictEqual([
       3,
@@ -86,3 +86,5 @@ describe('insertFaceCards', () => {
     ]);
   });
 });
+
+
