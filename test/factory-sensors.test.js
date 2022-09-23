@@ -6,7 +6,7 @@ import {
   OverheatingError,
 } from './factory-sensors';
 
-describe('checkHumidityLevel', () => {
+describe.skip('checkHumidityLevel', () => {
   test('should throw if the humidity percentage is 100', () => {
     expect(() => checkHumidityLevel(100)).toThrow();
   });
@@ -16,7 +16,7 @@ describe('checkHumidityLevel', () => {
   });
 });
 
-describe('reportOverheating', () => {
+describe.skip('reportOverheating', () => {
   test('should not throw if the temperature is 200°C', () => {
     expect(() => reportOverheating(200)).not.toThrow();
   });
@@ -40,7 +40,7 @@ describe('reportOverheating', () => {
   });
 });
 
-describe('monitorTheMachine', () => {
+describe.skip('monitorTheMachine', () => {
   const actions = {
     check: jest.fn(),
     alertDeadSensor: jest.fn(),
