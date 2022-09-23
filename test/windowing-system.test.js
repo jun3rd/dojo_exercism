@@ -5,7 +5,7 @@ import {
   changeWindow,
 } from './windowing-system';
 
-describe('Size class', () => {
+describe.skip('Size class', () => {
   test('allows to create a new instance', () => {
     const size = new Size(110, 220);
     expect(size.width).toBe(110);
@@ -26,7 +26,7 @@ describe('Size class', () => {
   });
 });
 
-describe('Position class', () => {
+describe.skip('Position class', () => {
   test('allows to create a new instance', () => {
     const position = new Position(10, 20);
     expect(position.x).toBe(10);
@@ -47,7 +47,7 @@ describe('Position class', () => {
   });
 });
 
-describe('ProgramWindow class', () => {
+describe.skip('ProgramWindow class', () => {
   test('allows to create a new instance', () => {
     const window = new ProgramWindow();
 
@@ -74,7 +74,7 @@ describe('ProgramWindow class', () => {
   });
 });
 
-describe('resize', () => {
+describe.skip('resize', () => {
   test('provides a resize method', () => {
     const programWindow = new ProgramWindow();
     const newSize = new Size(300, 200);
@@ -94,7 +94,7 @@ describe('resize', () => {
   });
 });
 
-describe('move', () => {
+describe.skip('move', () => {
   test('provides a move method', () => {
     const programWindow = new ProgramWindow();
     const newPosition = new Position(525, 450);
@@ -136,7 +136,7 @@ describe('move', () => {
   });
 });
 
-describe('changeWindow', () => {
+describe.skip('changeWindow', () => {
   test('resizes the window', () => {
     const programWindow = new ProgramWindow();
     const updatedWindow = changeWindow(programWindow);
