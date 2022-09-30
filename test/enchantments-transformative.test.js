@@ -10,7 +10,7 @@ import {
   reorder,
 } from './enchantments-transformative';
 
-describe('seeingDouble', () => {
+describe.skip('seeingDouble', () => {
   test('doubles all the values', () => {
     const deck1 = [1, 2, 3, 4];
     const expected1 = [2, 4, 6, 8];
@@ -42,7 +42,7 @@ describe('seeingDouble', () => {
   });
 });
 
-describe('threeOfEachThree', () => {
+describe.skip('threeOfEachThree', () => {
   test('one 3 is converted into three 3s', () => {
     expect(threeOfEachThree([3])).toEqual([3, 3, 3]);
   });
@@ -62,7 +62,7 @@ describe('threeOfEachThree', () => {
   });
 });
 
-describe('middleTwo', () => {
+describe.skip('middleTwo', () => {
   test('extracts the middle two cards', () => {
     const deck = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
     const expected = [5, 6];
@@ -76,7 +76,7 @@ describe('middleTwo', () => {
   });
 });
 
-describe('sandwichTrick', () => {
+describe.skip('sandwichTrick', () => {
   test('moves the outside two cards into the middle', () => {
     const deck = [1, 6, 7, 7, 2, 1];
     const expected = [6, 7, 1, 1, 7, 2];
@@ -100,7 +100,7 @@ describe('sandwichTrick', () => {
   });
 });
 
-describe('twoIsSpecial', () => {
+describe.skip('twoIsSpecial', () => {
   test('keeps only the 2s', () => {
     const deck = [1, 2, 9, 1, 2, 2, 6, 7];
     const expected = [2, 2, 2];
@@ -116,7 +116,7 @@ describe('twoIsSpecial', () => {
   });
 });
 
-describe('perfectlyOrdered', () => {
+describe.skip('perfectlyOrdered', () => {
   test('sorts the cards lowest to highest', () => {
     const deck = [2, 1, 6, 9, 3];
     const expected = [1, 2, 3, 6, 9];
@@ -140,7 +140,7 @@ describe('perfectlyOrdered', () => {
   });
 });
 
-describe('reorder', () => {
+describe.skip('reorder', () => {
   test('reorders the deck', () => {
     const deck = [2, 1, 6, 9, 3];
     const expected = [3, 9, 6, 1, 2];
