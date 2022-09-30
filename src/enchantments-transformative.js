@@ -8,7 +8,7 @@
  * @returns {number[]} deck with every card doubled
  */
 export function seeingDouble(deck) {
-  throw new Error('Implement the seeingDouble function');
+  return deck.map(card => card * 2)
 }
 
 /**
@@ -19,9 +19,18 @@ export function seeingDouble(deck) {
  * @returns {number[]} deck with triplicate 3s
  */
 export function threeOfEachThree(deck) {
-  throw new Error('Implement the threeOfEachThree function');
+  let newdeck = []
+  deck.map(card => {
+    if (card === 3) {
+      newdeck.push(card)
+      newdeck.push(card)
+      newdeck.push(card)
+    } else {
+      newdeck.push(card)
+    }
+  })
+  return newdeck
 }
-
 /**
  * Extracts the middle two cards from a deck.
  * Assumes a deck is always 10 cards.
@@ -31,7 +40,7 @@ export function threeOfEachThree(deck) {
  * @returns {number[]} deck with only two middle cards
  */
 export function middleTwo(deck) {
-  throw new Error('Implement the middleTwo function');
+  return deck.slice((deck.length/2 -1),(deck.length/2 +1))
 }
 
 /**
@@ -43,7 +52,13 @@ export function middleTwo(deck) {
  */
 
 export function sandwichTrick(deck) {
-  throw new Error('Implement the sandwichTrick function');
+  let deckcopy = [...deck]
+  let deckinsert = []
+  deckinsert.push(deckcopy.shift())
+  deckinsert.push(deckcopy.pop())
+  deckcopy.splice(deckcopy.length/2, 0, deckinsert[0])
+  deckcopy.splice(deckcopy.length/2, 0, deckinsert[1])
+  return deckcopy
 }
 
 /**
@@ -54,7 +69,7 @@ export function sandwichTrick(deck) {
  * @returns {number[]} deck with only 2s
  */
 export function twoIsSpecial(deck) {
-  throw new Error('Implement the twoIsSpecial function');
+  return deck.filter(card => (card===2) ? true : false )
 }
 
 /**
@@ -65,7 +80,8 @@ export function twoIsSpecial(deck) {
  * @returns {number[]} ordered deck
  */
 export function perfectlyOrdered(deck) {
-  throw new Error('Implement the perfectlyOrdered function');
+  if(deck.length === 0) { return [] }
+  return deck.sort((a,b) => a-b)
 }
 
 /**
@@ -76,5 +92,6 @@ export function perfectlyOrdered(deck) {
  * @returns {number[]} reordered deck
  */
 export function reorder(deck) {
-  throw new Error('Implement the reorder function');
+  return deck.reverse()
 }
+

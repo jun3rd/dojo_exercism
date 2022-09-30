@@ -86,7 +86,7 @@ describe.skip('Batch service', () => {
     await expect(actual).rejects.toThrow(expected);
   });
 
-  xtest('it throws on an empty input', async () => {
+  test('it throws on an empty input', async () => {
     const actual = service.batch([]);
     const expected = BatchIsEmpty;
 

@@ -6,7 +6,7 @@ import {
   removeDuplicates,
 } from './ozans-playlist';
 
-describe('removeDuplicates', () => {
+describe.skip('removeDuplicates', () => {
   test('works for an empty playlist', () => {
     const playlist = [];
 
@@ -23,7 +23,7 @@ describe('removeDuplicates', () => {
   });
 });
 
-describe('hasTrack', () => {
+describe.skip('hasTrack', () => {
   const TRACK_1 = 'Big Science - Laurie Anderson';
   const TRACK_2 = 'Tightrope - Laurie Anderson';
 
@@ -40,7 +40,7 @@ describe('hasTrack', () => {
   });
 });
 
-describe('addTrack', () => {
+describe.skip('addTrack', () => {
   const TRACK_1 = 'Jigsaw Feeling - Siouxsie and the Banshees';
   const TRACK_2 = 'Feeling Good - Nina Simone';
 
@@ -59,7 +59,7 @@ describe('addTrack', () => {
   });
 });
 
-describe('deleteTrack', () => {
+describe.skip('deleteTrack', () => {
   const TRACK_1 = 'Ancestors - Tanya Tagaq';
   const TRACK_2 = 'Take This Hammer - Lead Belly';
 
@@ -78,7 +78,7 @@ describe('deleteTrack', () => {
   });
 });
 
-describe('listArtists', () => {
+describe.skip('listArtists', () => {
   test('works for an empty playlist', () => {
     const playlist = [];
 
