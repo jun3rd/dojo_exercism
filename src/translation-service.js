@@ -78,13 +78,16 @@ export class TranslationService {
     // TEST passed: one item to translate
     // TEST passed: throw if 1+ translations fail
 
+    console.log(`length: ${texts.length}`)
     let promises = texts.map(text => this.free(text))
     return Promise
       .all(promises)
       .then(translations => {
-        if (translations) { return translations }
-        else { throw new BatchIsEmpty() }
+        if (translations.length === 0) { throw new BatchIsEmpty() }
+        else if (translations.length > 0) { return translations }
+        else { throw new Error('Not yet translated') }
       })
+
   }
 
   /**
