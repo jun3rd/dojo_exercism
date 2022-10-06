@@ -37,7 +37,7 @@ describe('Free service', () => {
     await expect(actual).rejects.toThrow(expected);
   });
 
-  xtest('it forwards Untranslatable errors from the API, unaltered', async () => {
+  test('it forwards Untranslatable errors from the API, unaltered', async () => {
     const actual = service.free('majQa’');
     const expected = Untranslatable;
 

@@ -34,12 +34,16 @@ export class TranslationService {
     // step-3: I am waiting with a 'then' method call
     // step-4: the API sends me a translation
 
-    // console.log(text)
-    // let answer = this.api.fetch(text).then(responseFromAPI => responseFromAPI.translation)
-    // console.log(answer)
+    // API response verification:a
+    /*
+      console.log(text)
+      let answer = this.api.fetch(text).then(responseFromAPI => responseFromAPI.translation)
+      console.log(answer)
+    */
   
     // TEST passed: it can translate a known word group
     // TEST passed: forwards NotAvailable errors, unaltered
+    // TEST passed: forwards Untranslatable errors, unaltered
 
     return this.api.fetch(text).then(responseFromAPI => responseFromAPI.translation)
   }
