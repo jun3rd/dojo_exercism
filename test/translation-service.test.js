@@ -30,7 +30,7 @@ describe('Free service', () => {
     await expect(actual).resolves.toBe(expected);
   });
 
-  xtest('it forwards NotAvailable errors from the API, unaltered', async () => {
+  test('it forwards NotAvailable errors from the API, unaltered', async () => {
     const actual = service.free('jIyajbe’');
     const expected = NotAvailable;
 

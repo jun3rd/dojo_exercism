@@ -39,6 +39,7 @@ export class TranslationService {
     // console.log(answer)
   
     // TEST passed: it can translate a known word group
+    // TEST passed: forwards NotAvailable errors, unaltered
 
     return this.api.fetch(text).then(responseFromAPI => responseFromAPI.translation)
   }
