@@ -44,6 +44,7 @@ export class TranslationService {
     // TEST passed: it can translate a known word group
     // TEST passed: forwards NotAvailable errors, unaltered
     // TEST passed: forwards Untranslatable errors, unaltered
+    // TEST PASSED: feature completed
 
     return this.api.fetch(text).then(responseFromAPI => responseFromAPI.translation)
   }
