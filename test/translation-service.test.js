@@ -45,7 +45,7 @@ describe('Free service', () => {
   });
 });
 
-describe.skip('Batch service', () => {
+describe('Batch service', () => {
   /** @type {TranslationService} */
   let service;
 
@@ -58,7 +58,7 @@ describe.skip('Batch service', () => {
     service = new TranslationService(api);
   });
 
-  xtest('it can translate a batch', async () => {
+  test('it can translate a batch', async () => {
     const actual = service.batch(['jIyaj', 'majQa’']);
     const expected = ['I understand', 'Well done!'];
 
@@ -86,7 +86,7 @@ describe.skip('Batch service', () => {
     await expect(actual).rejects.toThrow(expected);
   });
 
-  test('it throws on an empty input', async () => {
+  xtest('it throws on an empty input', async () => {
     const actual = service.batch([]);
     const expected = BatchIsEmpty;
 

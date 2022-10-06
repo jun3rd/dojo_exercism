@@ -1,4 +1,4 @@
-/// <reference path="./global.d.ts" />
+// <reference path="./global.d.ts" />
 // @ts-check
 //
 // The lines above enable type checking for this file. Various IDEs interpret
@@ -27,14 +27,16 @@ export class TranslationService {
    * @returns {Promise<string>}
    */
   free(text) {
-    // fetch translation from storage -OR- API throws NotAvailable error
-    // promise returns: (1) translation, (2) quality
-    // step-1: I am 'fetching' from the API a translation
-    // step-2: the API sends me back a promise
-    // step-3: I am waiting with a 'then' method call
-    // step-4: the API sends me a translation
+    /**
+     * fetch translation from storage -OR- API throws NotAvailable error
+     * promise returns: (1) translation, (2) quality
+     * step-1: I am 'fetching' from the API a translation
+     * step-2: the API sends me back a promise
+     * step-3: I am waiting with a 'then' method call
+     * step-4: the API sends me a translation
+     */
 
-    // API response verification:a
+    // API response verification:
     /*
       console.log(text)
       let answer = this.api.fetch(text).then(responseFromAPI => responseFromAPI.translation)
@@ -60,7 +62,24 @@ export class TranslationService {
    * @returns {Promise<string[]>}
    */
   batch(texts) {
-    throw new Error('Implement the batch function');
+    /*
+     * translate an array of texts
+     */
+
+    // API response verification
+    /*
+      console.log(texts)
+      let promises = texts.map(text => this.free(text))
+      console.log(promises)
+    */
+
+    // TEST passed: translate batch
+
+    let promises = texts.map(text => this.free(text))
+    return Promise
+      .all(promises)
+      .then(translations => translations)
+      .catch(error => this.api.BatchIsEmpty())
   }
 
   /**
