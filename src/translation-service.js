@@ -75,6 +75,7 @@ export class TranslationService {
 
     // TEST passed: translate batch
     // TEST passed: maintain order of batch input
+    // TEST passed: one item to translate
 
     let promises = texts.map(text => this.free(text))
     return Promise

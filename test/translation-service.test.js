@@ -72,7 +72,7 @@ describe('Batch service', () => {
     await expect(actual).resolves.toStrictEqual(expected);
   });
 
-  xtest('it works with just one item to translate', async () => {
+  test('it works with just one item to translate', async () => {
     const actual = service.batch(['jIyaj']);
     const expected = ['I understand'];
 
