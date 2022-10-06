@@ -65,7 +65,7 @@ describe('Batch service', () => {
     await expect(actual).resolves.toStrictEqual(expected);
   });
 
-  xtest('it maintains the order of batch input', async () => {
+  test('it maintains the order of batch input', async () => {
     const actual = service.batch(['majQa’', 'jIyaj']);
     const expected = ['Well done!', 'I understand'];
 
