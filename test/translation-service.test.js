@@ -10,7 +10,7 @@ import {
 import { NotAvailable, Untranslatable } from './translation-service-errors';
 import { ExternalApi } from './translation-service-api';
 
-describe.skip('Free service', () => {
+describe('Free service', () => {
   /** @type {TranslationService} */
   let service;
 
@@ -23,7 +23,7 @@ describe.skip('Free service', () => {
     service = new TranslationService(api);
   });
 
-  xtest('it can translate a known word group', async () => {
+  test('it can translate a known word group', async () => {
     const actual = service.free('jIyaj');
     const expected = 'I understand';
 

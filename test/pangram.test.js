@@ -1,6 +1,6 @@
 import { isPangram } from './pangram';
 
-describe('Pangram()', () => {
+describe.skip('Pangram()', () => {
   test('empty sentence', () => {
     expect(isPangram('')).toBe(false);
   });

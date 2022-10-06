@@ -27,7 +27,20 @@ export class TranslationService {
    * @returns {Promise<string>}
    */
   free(text) {
-    throw new Error('Implement the free function');
+    // fetch translation from storage -OR- API throws NotAvailable error
+    // promise returns: (1) translation, (2) quality
+    // step-1: I am 'fetching' from the API a translation
+    // step-2: the API sends me back a promise
+    // step-3: I am waiting with a 'then' method call
+    // step-4: the API sends me a translation
+
+    // console.log(text)
+    // let answer = this.api.fetch(text).then(responseFromAPI => responseFromAPI.translation)
+    // console.log(answer)
+  
+    // TEST passed: it can translate a known word group
+
+    return this.api.fetch(text).then(responseFromAPI => responseFromAPI.translation)
   }
 
   /**
