@@ -79,7 +79,7 @@ describe('Batch service', () => {
     await expect(actual).resolves.toStrictEqual(expected);
   });
 
-  xtest('it throws if one or more translations fail', async () => {
+  test('it throws if one or more translations fail', async () => {
     const actual = service.batch(['jIyaj', 'jIyajbe’', 'majQa’']);
     const expected = NotAvailable;
 

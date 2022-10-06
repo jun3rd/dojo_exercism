@@ -76,12 +76,15 @@ export class TranslationService {
     // TEST passed: translate batch
     // TEST passed: maintain order of batch input
     // TEST passed: one item to translate
+    // TEST passed: throw if 1+ translations fail
 
     let promises = texts.map(text => this.free(text))
     return Promise
       .all(promises)
-      .then(translations => translations)
-      .catch(error => this.api.BatchIsEmpty())
+      .then(translations => {
+        if (translations) { return translations }
+        else { throw new BatchIsEmpty() }
+      })
   }
 
   /**
