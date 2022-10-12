@@ -127,7 +127,7 @@ describe('Request service', () => {
     await expect(actual).rejects.toThrow(expected);
   });
 
-  xtest('it requests up to three times (retries once or twice)', async () => {
+  test('it requests up to three times (retries once or twice)', async () => {
     const actual = service.request('jIyajbe’');
     await expect(actual).resolves.toBeUndefined();
   });
