@@ -78,7 +78,6 @@ export class TranslationService {
     // TEST passed: one item to translate
     // TEST passed: throw if 1+ translations fail
 
-    console.log(`length: ${texts.length}`)
     let promises = texts.map(text => this.free(text))
     return Promise
       .all(promises)
@@ -100,7 +99,29 @@ export class TranslationService {
    * @returns {Promise<void>}
    */
   request(text) {
-    throw new Error('Implement the request function');
+    /**
+     * request translation be added to API storage
+     * if failure encountered, automatic retry up to 3 attempts
+     */
+
+    // API response verification
+    ///*
+    // console.log(text)
+    // console.log(this.api.request(text, answer => (answer) ? console.log(answer) : false))
+    // */
+    let requestTranslation = (translationError) => {
+      return new Promise((resolve, reject) => {
+        this.api.request(text, error => {
+          if(error) { reject(error) }
+          else { resolve() }
+        })
+      })
+    }
+    return this.api.fetch(text)
+        .catch(requestTranslation)
+        .catch(requestTranslation)
+        .catch(requestTranslation)
+
   }
 
   /**
@@ -114,7 +135,7 @@ export class TranslationService {
    * @returns {Promise<string>}
    */
   premium(text, minimumQuality) {
-    throw new Error('Implement the premium function');
+    // ?
   }
 }
 

@@ -94,7 +94,7 @@ describe('Batch service', () => {
   });
 });
 
-describe.skip('Request service', () => {
+describe('Request service', () => {
   /** @type {TranslationService} */
   let service;
 
@@ -115,7 +115,7 @@ describe.skip('Request service', () => {
     service = new TranslationService(api);
   });
 
-  xtest('it can request something that is not available, but eventually is', async () => {
+  test('it can request something that is not available, but eventually is', async () => {
     const actual = service.request('majQa’');
     await expect(actual).resolves.toBeUndefined();
   });
