@@ -112,6 +112,7 @@ export class TranslationService {
 
     // TEST passed: request something not available, but eventually is
     // TEST Passed: rejects if not translatable
+    // TEST Passed: up to 3 request attempts
     // TEST Passed: max 3 request attempts
 
     let requestTranslation = (translationError) => {
