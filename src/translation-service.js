@@ -109,6 +109,10 @@ export class TranslationService {
     // console.log(text)
     // console.log(this.api.request(text, answer => (answer) ? console.log(answer) : false))
     // */
+
+    // TEST passed: request something not available, but eventually is
+    // TEST Passed: rejects if not translatable
+
     let requestTranslation = (translationError) => {
       return new Promise((resolve, reject) => {
         this.api.request(text, error => {

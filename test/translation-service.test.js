@@ -120,7 +120,7 @@ describe('Request service', () => {
     await expect(actual).resolves.toBeUndefined();
   });
 
-  xtest('it eventually rejects when something is not translatable', async () => {
+  test('it eventually rejects when something is not translatable', async () => {
     const actual = service.request('foo');
     const expected = Untranslatable;
 
