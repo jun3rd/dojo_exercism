@@ -186,7 +186,7 @@ describe('Premium service', () => {
     await expect(actual).rejects.toThrow(Error);
   });
 
-  xtest('it recognizes sufficient quality', async () => {
+  test('it recognizes sufficient quality', async () => {
     const actual = service.premium('‘arlogh Qoylu’pu’?', 40);
     const expected = 'What time is it?';
 
