@@ -149,6 +149,9 @@ export class TranslationService {
     console.log(this.request(text))
      */
 
+    // TEST passed: resolve translation
+    // TEST passed: request and resolve unavailable translations
+
     return this.request(text)
       .then(() => this.api.fetch(text))
       .then(response => {

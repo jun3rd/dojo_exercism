@@ -166,7 +166,7 @@ describe('Premium service', () => {
     await expect(actual).resolves.toBe(expected);
   });
 
-  xtest('it requests unavailable translations and then resolves', async () => {
+  test('it requests unavailable translations and then resolves', async () => {
     const actual = service.premium('jIyajbe’', 0);
     const expected = "I don't understand";
 
