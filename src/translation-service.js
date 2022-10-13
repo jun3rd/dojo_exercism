@@ -141,7 +141,22 @@ export class TranslationService {
    * @returns {Promise<string>}
    */
   premium(text, minimumQuality) {
-    // ?
+
+    // API response verification
+    /*
+    console.log(`text: ${text}`)
+    console.log(`minimum quality: ${minimumQuality}`)
+    console.log(this.request(text))
+     */
+
+    return this.request(text)
+      .then(() => this.api.fetch(text))
+      .then(response => {
+        if(response.quality < minimumQuality) {
+          throw new QualityThresholdNotMet(text)
+        }
+        return response.translation
+      })
   }
 }
 

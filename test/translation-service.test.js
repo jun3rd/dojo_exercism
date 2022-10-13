@@ -139,7 +139,7 @@ describe('Request service', () => {
   });
 });
 
-describe.skip('Premium service', () => {
+describe('Premium service', () => {
   /** @type {TranslationService} */
   let service;
 
@@ -159,7 +159,7 @@ describe.skip('Premium service', () => {
     service = new TranslationService(api);
   });
 
-  xtest('it can resolve a translation', async () => {
+  test('it can resolve a translation', async () => {
     const actual = service.premium('majQa’', 0);
     const expected = 'Well done';
 
