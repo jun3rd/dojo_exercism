@@ -151,6 +151,7 @@ export class TranslationService {
 
     // TEST passed: resolve translation
     // TEST passed: request and resolve unavailable translations
+    // TEST passed: reject premium failed untranslatable
 
     return this.request(text)
       .then(() => this.api.fetch(text))

@@ -173,7 +173,7 @@ describe('Premium service', () => {
     await expect(actual).resolves.toBe(expected);
   });
 
-  xtest('it rejects with Untranslatable if the premium service fails to translate', async () => {
+  test('it rejects with Untranslatable if the premium service fails to translate', async () => {
     const actual = service.premium('foo', 0);
     const expected = Untranslatable;
 
