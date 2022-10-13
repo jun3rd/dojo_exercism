@@ -200,7 +200,7 @@ describe('Premium service', () => {
     await expect(actual).rejects.toThrow(expected);
   });
 
-  xtest('it ensures the quality even after a request', async () => {
+  test('it ensures the quality even after a request', async () => {
     const actualQuality = service.premium('‘arlogh Qoylu’pu’?', 100);
     const expectedQuality = QualityThresholdNotMet;
     await expect(actualQuality).rejects.toThrow(expectedQuality);

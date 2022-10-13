@@ -155,6 +155,7 @@ export class TranslationService {
     // TEST passed: max 3 requests
     // TEST passed: quality sufficient
     // TEST passed: quality insufficient
+    // TEST passed: ensure quality
 
     return this.request(text)
       .then(() => this.api.fetch(text))
