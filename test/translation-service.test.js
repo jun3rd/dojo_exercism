@@ -193,7 +193,7 @@ describe('Premium service', () => {
     await expect(actual).resolves.toBe(expected);
   });
 
-  xtest('it recognizes insufficient quality', async () => {
+  test('it recognizes insufficient quality', async () => {
     const actual = service.premium('majQa’', 100);
     const expected = QualityThresholdNotMet;
 
