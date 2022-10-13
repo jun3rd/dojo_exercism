@@ -180,7 +180,7 @@ describe('Premium service', () => {
     await expect(actual).rejects.toThrow(expected);
   });
 
-  xtest('it requests at most three times (does not retry thrice or more)', async () => {
+  test('it requests at most three times (does not retry thrice or more)', async () => {
     const actual = service.premium('ghobe’', 0);
 
     await expect(actual).rejects.toThrow(Error);
