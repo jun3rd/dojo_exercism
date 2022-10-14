@@ -8,6 +8,7 @@
 // TEST passed: C to G
 // TEST passed: T to A
 // TEST passed: A to U
+// TEST passed: all DNA to RNA
 
 export const toRna = (sequence) => {
   if (sequence.length > 0) {
