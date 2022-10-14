@@ -1,4 +1,4 @@
-// <reference path="./global.d.ts" />
+/// <reference path="./global.d.ts" />
 // @ts-check
 //
 // The lines above enable type checking for this file. Various IDEs interpret
@@ -27,28 +27,7 @@ export class TranslationService {
    * @returns {Promise<string>}
    */
   free(text) {
-    /**
-     * fetch translation from storage -OR- API throws NotAvailable error
-     * promise returns: (1) translation, (2) quality
-     * step-1: I am 'fetching' from the API a translation
-     * step-2: the API sends me back a promise
-     * step-3: I am waiting with a 'then' method call
-     * step-4: the API sends me a translation
-     */
-
-    // API response verification:
-    /*
-      console.log(text)
-      let answer = this.api.fetch(text).then(responseFromAPI => responseFromAPI.translation)
-      console.log(answer)
-    */
-  
-    // TEST passed: it can translate a known word group
-    // TEST passed: forwards NotAvailable errors, unaltered
-    // TEST passed: forwards Untranslatable errors, unaltered
-    // TEST PASSED: feature completed
-
-    return this.api.fetch(text).then(responseFromAPI => responseFromAPI.translation)
+    throw new Error('Implement the free function');
   }
 
   /**
@@ -62,31 +41,7 @@ export class TranslationService {
    * @returns {Promise<string[]>}
    */
   batch(texts) {
-    /*
-     * translate an array of texts
-     */
-
-    // API response verification
-    /*
-      console.log(texts)
-      let promises = texts.map(text => this.free(text))
-      console.log(promises)
-    */
-
-    // TEST passed: translate batch
-    // TEST passed: maintain order of batch input
-    // TEST passed: one item to translate
-    // TEST passed: throw if 1+ translations fail
-
-    let promises = texts.map(text => this.free(text))
-    return Promise
-      .all(promises)
-      .then(translations => {
-        if (translations.length === 0) { throw new BatchIsEmpty() }
-        else if (translations.length > 0) { return translations }
-        else { throw new Error('Not yet translated') }
-      })
-
+    throw new Error('Implement the batch function');
   }
 
   /**
@@ -99,35 +54,7 @@ export class TranslationService {
    * @returns {Promise<void>}
    */
   request(text) {
-    /**
-     * request translation be added to API storage
-     * if failure encountered, automatic retry up to 3 attempts
-     */
-
-    // API response verification
-    ///*
-    // console.log(text)
-    // console.log(this.api.request(text, answer => (answer) ? console.log(answer) : false))
-    // */
-
-    // TEST passed: request something not available, but eventually is
-    // TEST Passed: rejects if not translatable
-    // TEST Passed: up to 3 request attempts
-    // TEST Passed: max 3 request attempts
-
-    let requestTranslation = (translationError) => {
-      return new Promise((resolve, reject) => {
-        this.api.request(text, error => {
-          if(error) { reject(error) }
-          else { resolve() }
-        })
-      })
-    }
-    return this.api.fetch(text)
-        .catch(requestTranslation)
-        .catch(requestTranslation)
-        .catch(requestTranslation)
-
+    throw new Error('Implement the request function');
   }
 
   /**
@@ -141,30 +68,7 @@ export class TranslationService {
    * @returns {Promise<string>}
    */
   premium(text, minimumQuality) {
-
-    // API response verification
-    /*
-    console.log(`text: ${text}`)
-    console.log(`minimum quality: ${minimumQuality}`)
-    console.log(this.request(text))
-     */
-
-    // TEST passed: resolve translation
-    // TEST passed: request and resolve unavailable translations
-    // TEST passed: reject premium failed untranslatable
-    // TEST passed: max 3 requests
-    // TEST passed: quality sufficient
-    // TEST passed: quality insufficient
-    // TEST passed: ensure quality
-
-    return this.request(text)
-      .then(() => this.api.fetch(text))
-      .then(response => {
-        if(response.quality < minimumQuality) {
-          throw new QualityThresholdNotMet(text)
-        }
-        return response.translation
-      })
+    throw new Error('Implement the premium function');
   }
 }
 

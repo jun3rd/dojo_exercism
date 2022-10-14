@@ -1,4 +1,4 @@
-import { AbusiveClientError, NotAvailable, Untranslatable } from './translation-service-errors';
+import { AbusiveClientError, NotAvailable, Untranslatable } from './errors';
 
 const mutex = { current: false };
 

@@ -1,8 +1,8 @@
 import { gigasecond } from './gigasecond';
 
-describe.skip('Gigasecond', () => {
+describe('Gigasecond', () => {
   // date only specification of time
-  xtest('tells a gigasecond anniversary since midnight', () => {
+  test('tells a gigasecond anniversary since midnight', () => {
     const gs = gigasecond(new Date(Date.UTC(2011, 3, 25)));
     const expectedDate = new Date(Date.parse('2043-01-01T01:46:40Z'));
     expect(gs).toEqual(expectedDate);
