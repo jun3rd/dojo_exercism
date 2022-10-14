@@ -13,7 +13,7 @@ describe('Transcription', () => {
     expect(toRna('G')).toEqual('C');
   });
 
-  xtest('transcribes thymine to adenine', () => {
+  test('transcribes thymine to adenine', () => {
     expect(toRna('T')).toEqual('A');
   });
 
