@@ -6,6 +6,7 @@
 
 // TEST passed: anniversary since midnight
 // TEST passed: another anniversay date since midnight
+// TEST passed: another anniversay date since midnight, before Unix Epoch
 
 export const gigasecond = (intime) => {
   let gsec = 1000000000
