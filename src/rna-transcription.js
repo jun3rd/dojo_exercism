@@ -4,6 +4,7 @@
 //
 
 // TEST passed: empty rna sequence
+// TEST passed: C to G
 
 export const toRna = (sequence) => {
   if (sequence.length > 0) {
