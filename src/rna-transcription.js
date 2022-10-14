@@ -7,6 +7,7 @@
 // TEST passed: G to C
 // TEST passed: C to G
 // TEST passed: T to A
+// TEST passed: A to U
 
 export const toRna = (sequence) => {
   if (sequence.length > 0) {
