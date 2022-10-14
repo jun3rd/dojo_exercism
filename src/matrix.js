@@ -6,6 +6,7 @@
 // TEST passed: extract from 1 number matrix
 // TEST passed: extract rows
 // TEST passed: extract rows with different size numbers
+// TEST passed: non-square matrix
 
 export class Matrix {
   constructor(matrix) {

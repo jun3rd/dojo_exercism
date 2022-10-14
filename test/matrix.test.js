@@ -13,7 +13,7 @@ describe('Matrix', () => {
     expect(new Matrix('1 2\n10 20').rows[1]).toEqual([10, 20]);
   });
 
-  xtest('can extract row from non-square matrix with no corresponding column', () => {
+  test('can extract row from non-square matrix with no corresponding column', () => {
     expect(new Matrix('1 2 3\n4 5 6\n7 8 9\n8 7 6').rows[3]).toEqual([8, 7, 6]);
   });
 
