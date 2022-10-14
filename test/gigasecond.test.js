@@ -23,7 +23,7 @@ describe('Gigasecond', () => {
   });
 
   // full time specified
-  xtest('tells the anniversary, including a time', () => {
+  test('tells the anniversary, including a time', () => {
     const gs = gigasecond(new Date(Date.UTC(2015, 0, 24, 22, 0, 0)));
     const expectedDate = new Date(Date.parse('2046-10-02T23:46:40Z'));
     expect(gs).toEqual(expectedDate);
