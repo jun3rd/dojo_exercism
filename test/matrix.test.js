@@ -9,7 +9,7 @@ describe('Matrix', () => {
     expect(new Matrix('1 2\n3 4').rows[1]).toEqual([3, 4]);
   });
 
-  xtest('extract row where numbers have different widths', () => {
+  test('extract row where numbers have different widths', () => {
     expect(new Matrix('1 2\n10 20').rows[1]).toEqual([10, 20]);
   });
 

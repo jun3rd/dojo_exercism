@@ -4,6 +4,8 @@
 //
 
 // TEST passed: extract from 1 number matrix
+// TEST passed: extract rows
+// TEST passed: extract rows with different size numbers
 
 export class Matrix {
   constructor(matrix) {
