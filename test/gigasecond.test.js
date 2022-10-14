@@ -9,7 +9,7 @@ describe('Gigasecond', () => {
   });
 
   // second test for date only specification of time
-  xtest('tells another gigasecond anniversary since midnight', () => {
+  test('tells another gigasecond anniversary since midnight', () => {
     const gs = gigasecond(new Date(Date.UTC(1977, 5, 13)));
     const expectedDate = new Date(Date.parse('2009-02-19T01:46:40Z'));
     expect(gs).toEqual(expectedDate);
