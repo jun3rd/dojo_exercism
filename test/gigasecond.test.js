@@ -30,7 +30,7 @@ describe('Gigasecond', () => {
   });
 
   // full time with day roll-over
-  xtest('tells the anniversary is next day when you are born at night', () => {
+  test('tells the anniversary is next day when you are born at night', () => {
     const gs = gigasecond(new Date(Date.UTC(2015, 0, 24, 23, 59, 59)));
     const expectedDate = new Date(Date.parse('2046-10-03T01:46:39Z'));
     expect(gs).toEqual(expectedDate);
