@@ -12,14 +12,15 @@ export class Matrix {
   }
 
   get rows() {
-    console.log(this.matrix)
-    let array_of_strings = this.matrix.split("")
-    let array_of_nums = array_of_strings.map(num => {
-      return Number(num)
+    let array_of_strings = this.matrix.split("\n")
+    let array_of_string_rows = array_of_strings.map(str => {
+      let str_row = str.split(" ")
+      let str_row_num = str_row.map(ltr => {
+        return Number(ltr)
+      })
+      this.mtx.push(str_row_num)
+      return str_row_num
     })
-    console.log(array_of_strings)
-    console.log(array_of_nums)
-    this.mtx.push(array_of_nums)
     return this.mtx
   }
 
@@ -27,3 +28,6 @@ export class Matrix {
     throw new Error('Remove this statement and implement this function');
   }
 }
+
+
+

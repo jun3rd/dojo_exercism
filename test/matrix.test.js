@@ -5,7 +5,7 @@ describe('Matrix', () => {
     expect(new Matrix('1').rows[0]).toEqual([1]);
   });
 
-  xtest('can extract row', () => {
+  test('can extract row', () => {
     expect(new Matrix('1 2\n3 4').rows[1]).toEqual([3, 4]);
   });
 
