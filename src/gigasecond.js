@@ -9,6 +9,7 @@
 // TEST passed: another anniversary date since midnight, before Unix Epoch
 // TEST passed: tells anniversary, including a time
 // TEST passed: tells anniversary is next day, if born at night
+// TEST passed: does not mutate input
 
 export const gigasecond = (intime) => {
   let gsec = 1000000000

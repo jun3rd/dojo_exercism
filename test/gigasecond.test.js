@@ -36,7 +36,7 @@ describe('Gigasecond', () => {
     expect(gs).toEqual(expectedDate);
   });
 
-  xtest('does not mutate the input', () => {
+  test('does not mutate the input', () => {
     const input = new Date(Date.UTC(2020, 0, 4, 20, 28, 30));
     gigasecond(input);
     expect(input).toEqual(new Date(Date.UTC(2020, 0, 4, 20, 28, 30)));
