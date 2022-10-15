@@ -28,7 +28,13 @@ export class Matrix {
   }
 
   get columns() {
-    throw new Error('Remove this statement and implement this function');
+    let array_of_strings = this.matrix.split("\n")
+
+    let str_column_num = array_of_strings.map(ltr => {
+      return Number(ltr)
+    })
+    this.mtx.push(str_column_num)
+    return this.mtx
   }
 }
 
