@@ -21,7 +21,7 @@ describe('Matrix', () => {
     expect(new Matrix('1').columns[0]).toEqual([1]);
   });
 
-  xtest('can extract column', () => {
+  test('can extract column', () => {
     expect(new Matrix('1 2 3\n4 5 6\n7 8 9').columns[2]).toEqual([3, 6, 9]);
   });
 

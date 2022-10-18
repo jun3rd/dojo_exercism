@@ -8,6 +8,7 @@
 // TEST passed: extract rows with different size numbers
 // TEST passed: non-square matrix
 // TEST passed: extract column from 1-number matrix
+// TEST passed: extract columns
 
 
 export class Matrix {
@@ -46,6 +47,7 @@ export class Matrix {
   }
 
   removeCruft(currentSqr) {
+    console.log(currentSqr)
     let cleanedUpAry = []
     cleanedUpAry = currentSqr.map(row => {
       let newRow = row.filter(element => {
@@ -90,17 +92,18 @@ export class Matrix {
     console.log('_________________________________________________________')
       this.stringToMatrix()
     console.log('^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^')
-    console.log('_________________________________________________________')
+    console.log('___________________SQUARED_______________________________')
       let answer = this.squareArray(this.currentMatrix)
       console.log(answer)
     console.log('^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^')
+    console.log('___________________TRANSPOSED____________________________')
       answer = this.transposeSqr(this.currentMatrix)
       console.log(answer)
     console.log('^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^')
-    console.log('_________________________________________________________')
-      answer = this.removeCruft(this.currentMatrix)
-      console.log(answer)
-    console.log('^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^')
+//    console.log('__________________REMOVE CRUFT___________________________')
+//      answer = this.removeCruft(this.currentMatrix)
+//      console.log(answer)
+//    console.log('^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^')
       return answer
   }
 
