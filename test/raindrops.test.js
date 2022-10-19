@@ -18,7 +18,7 @@ describe('Raindrops', () => {
   test('the sound for 9 is Pling as it has a factor 3', () =>
     expect(convert(9)).toEqual('Pling'));
 
-  xtest('the sound for 10 is Plang as it has a factor 5', () =>
+  test('the sound for 10 is Plang as it has a factor 5', () =>
     expect(convert(10)).toEqual('Plang'));
 
   xtest('the sound for 14 is Plong as it has a factor of 7', () =>
