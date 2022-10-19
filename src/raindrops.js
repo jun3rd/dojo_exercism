@@ -16,19 +16,12 @@
 
 export const convert = (num) => {
   let raindrops = ""
-  if (num % 3 === 0) {
-    raindrops += 'Pling'
-  }
-  else if (num % 5 === 0) {
-    raindrops += 'Plang'
-  }
-  else if (num % 7 === 0) {
-    raindrops += 'Plong'
-  }
-  else {
+  if (num % 3 === 0) {raindrops = raindrops + "Pling"}
+  if (num % 5 === 0) {raindrops = raindrops + "Plang"}
+  if (num % 7 === 0) {raindrops = raindrops + "Plong"}
+  if ((num % 3 !== 0) && (num % 5 !== 0) && (num % 7 !== 0)) {
     raindrops = num.toString()
   }
-  console.log(raindrops)
   return raindrops
 };
 
