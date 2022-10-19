@@ -3,7 +3,7 @@ import { convert } from './raindrops';
 describe('Raindrops', () => {
   test('the sound for 1 is 1', () => expect(convert(1)).toEqual('1'));
 
-  xtest('the sound for 3 is Pling', () => expect(convert(3)).toEqual('Pling'));
+  test('the sound for 3 is Pling', () => expect(convert(3)).toEqual('Pling'));
 
   xtest('the sound for 5 is Plang', () => expect(convert(5)).toEqual('Plang'));
 

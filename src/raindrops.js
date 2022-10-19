@@ -9,17 +9,18 @@
 export const convert = (num) => {
   let raindrops = ""
   if (num % 3 === 0) {
-    raindrops.concat('Pling')
+    raindrops += 'Pling'
   }
   else if (num % 5 === 0) {
-    raindrops.concat('Plang')
+    raindrops += 'Plang'
   }
   else if (num % 7 === 0) {
-    raindrops.concat('Plong')
+    raindrops += 'Plong'
   }
   else {
     raindrops = num.toString()
   }
+  console.log(raindrops)
   return raindrops
 };
 
