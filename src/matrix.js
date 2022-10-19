@@ -9,6 +9,7 @@
 // TEST passed: non-square matrix
 // TEST passed: extract column from 1-number matrix
 // TEST passed: extract columns
+// TEST passed: extract columns from non-square, no corresponding rows
 // TEST passed: extract columns from non-square, long rows, short columns
 
 

@@ -31,7 +31,7 @@ describe('Matrix', () => {
     ]);
   });
 
-  xtest('can extract column from non-square matrix with more columns than rows', () => {
+  test('can extract column from non-square matrix with more columns than rows', () => {
     expect(new Matrix('1 2 3\n4 5 6').columns[2]).toEqual([3, 6]);
   });
 
