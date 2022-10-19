@@ -30,12 +30,6 @@ export class Matrix {
       this.currentMatrix.push(str_row_num)
       return str_row_num
     })
-    //console.log('___________________SQUARED_______________________________')
-    console.log('this.matrix:')
-    console.log(this.matrix)
-    console.log('this.currentMatrix @stringToMatrix()')
-    console.log(this.currentMatrix)
-    //console.log('^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^')
     return this.currentMatrix
   }
 
@@ -52,9 +46,6 @@ export class Matrix {
   // fill gaps inside each array with "undefined"-padding
   squareArray(ary) {
     let width = this.findWidestElement(ary)
-    console.log('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>')
-    console.log(`width: ${width}`)
-    console.log(`ary.length: ${ary.length}`)
     if(width === ary.length) {
       return ary
     }
@@ -74,14 +65,10 @@ export class Matrix {
     let transposed = currentSqr[0].map((_, outerColumnIndex) =>
       currentSqr.map(innerRow => innerRow[outerColumnIndex]))
     this.currentSqr = transposed
-    console.log('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>')
-    console.log('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>')
-    console.log(this.currentSqr)
     return this.currentSqr
   }
 
   removeCruft(currentSqr) {
-    //console.log(currentSqr)
     let cleanedUpAry = []
     cleanedUpAry = currentSqr.map(row => {
       let newRow = row.filter(element => {
@@ -92,8 +79,6 @@ export class Matrix {
           return element
         }
       })
-      //console.log('new row:')
-      //console.log(newRow)
       return newRow
     })
     this.currentMatrix = cleanedUpAry
@@ -112,39 +97,18 @@ export class Matrix {
     return this.currentMatrix 
   }
 
-  // //currentAry = currentAry.map(ary => ary); //console.log(wideSqr)
-
   get rows() {
-    console.log('REQUESTED  r o w s')
-    //console.log('_________________________________________________________')
-    console.log(this.stringToMatrix())
-    //console.log('^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^')
     return this.stringToMatrix()
   }
 
   get columns() {
-    console.log('REQUESTED  c o l u m n s')
-    //console.log('_________________________________________________________')
-      this.stringToMatrix()
-    //console.log('^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^')
-    //console.log('___________________SQUARED_______________________________')
-      this.currentMatrix = this.squareArray(this.currentMatrix)
-      //console.log(answer)
-    //console.log('^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^')
-    //console.log('___________________TRANSPOSED____________________________')
-      this.currentMatrix = this.transposeSqr(this.currentMatrix)
-      //console.log(answer)
-    //console.log('^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^')
-    //console.log('__________________REMOVE CRUFT___________________________')
-      this.currentMatrix = this.removeCruft(this.currentMatrix)
-      //console.log(answer)
-    //console.log('^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^')
-    //console.log('__________________REMOVE EMPTY ROWS______________________')
-      this.currentMatrix = this.removeEmptyRows(this.currentMatrix)
-      //console.log(answer)
-    //console.log('^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^')
+    this.stringToMatrix()
+    this.currentMatrix = this.squareArray(this.currentMatrix)
+    this.currentMatrix = this.transposeSqr(this.currentMatrix)
+    this.currentMatrix = this.removeCruft(this.currentMatrix)
+    this.currentMatrix = this.removeEmptyRows(this.currentMatrix)
     console.log(this.currentMatrix)
-      return this.currentMatrix 
+    return this.currentMatrix 
   }
 
 }
