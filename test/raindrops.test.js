@@ -5,7 +5,7 @@ describe('Raindrops', () => {
 
   test('the sound for 3 is Pling', () => expect(convert(3)).toEqual('Pling'));
 
-  xtest('the sound for 5 is Plang', () => expect(convert(5)).toEqual('Plang'));
+  test('the sound for 5 is Plang', () => expect(convert(5)).toEqual('Plang'));
 
   xtest('the sound for 7 is Plong', () => expect(convert(7)).toEqual('Plong'));
 
