@@ -13,6 +13,8 @@
 // TEST passed: sound for 10
 // TEST passed: sound for 14
 // TEST passed: sound for 15
+// TEST passed: sound for 21
+// TEST passed: sound for 25
 
 
 export const convert = (num) => {
