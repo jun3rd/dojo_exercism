@@ -11,6 +11,7 @@
 // TEST passed: extract columns
 // TEST passed: extract columns from non-square, no corresponding rows
 // TEST passed: extract columns from non-square, long rows, short columns
+// TEST passed: extract columns different width numbers
 
 
 export class Matrix {
