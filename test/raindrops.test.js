@@ -15,7 +15,7 @@ describe('Raindrops', () => {
   test('2 to the power 3 does not make a raindrop sound as 3 is the exponent not the base', () =>
     expect(convert(8)).toEqual('8'));
 
-  xtest('the sound for 9 is Pling as it has a factor 3', () =>
+  test('the sound for 9 is Pling as it has a factor 3', () =>
     expect(convert(9)).toEqual('Pling'));
 
   xtest('the sound for 10 is Plang as it has a factor 5', () =>
