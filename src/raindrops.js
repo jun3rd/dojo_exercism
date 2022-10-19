@@ -7,6 +7,7 @@
 // TEST passed: sound for 3
 // TEST passed: sound for 5
 // TEST passed: sound for 7
+// TEST passed: sound for 6
 
 
 export const convert = (num) => {
