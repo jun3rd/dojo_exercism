@@ -3,15 +3,17 @@
 // convenience to get you started writing code faster.
 //
 
+// TEST passed: equilateral: all sides equal
+
 export class Triangle {
 
   constructor(side1,side2,side3) {
     this.side1 = side1  
     this.side2 = side2  
     this.side3 = side3  
-    this.isEquilateral = this.isEquilateral.bind(this)
-    this.isIsosceles = this.isIsosceles.bind(this)
-    this.isScalene = this.isScalene.bind(this)
+    //this.isEquilateral = this.isEquilateral.bind(this)
+    //this.isIsosceles = this.isIsosceles.bind(this)
+    //this.isScalene = this.isScalene.bind(this)
   }
 
   get isEquilateral() {

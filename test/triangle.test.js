@@ -1,8 +1,8 @@
 import { Triangle } from './triangle';
 
-describe.skip('Triangle', () => {
-  describe.skip('equilateral triangle', () => {
-    xtest('all sides are equal', () => {
+describe('Triangle', () => {
+  describe('equilateral triangle', () => {
+    test('all sides are equal', () => {
       const triangle = new Triangle(2, 2, 2);
       expect(triangle.isEquilateral).toBe(true);
     });
