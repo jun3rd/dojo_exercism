@@ -21,10 +21,11 @@ export const steps = (posn) => {
 
 
   function collatzConjecture(n) {
-    console.log(`maxst: ${maxst}`) // test 12
+    //console.log(`maxst: ${maxst}`) // test 12
     while (n > 1) {
+      console.log(`st: ${st}`)
     //for(let x=0; x<maxst; x++) {
-      console.log(`x: ${x}`)
+      //console.log(`x: ${x}`)
       if (n % 2 === 0) {
         console.log(`n/2: ${n}`)
         //return n / 2

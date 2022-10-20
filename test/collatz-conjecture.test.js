@@ -5,7 +5,7 @@ describe('steps()', () => {
     expect(steps(1)).toEqual(0);
   });
 
-  xtest('divide if even', () => {
+  test('divide if even', () => {
     expect(steps(16)).toEqual(4);
   });
 
