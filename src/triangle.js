@@ -21,6 +21,7 @@ export class Triangle {
     if (this.side1 === this.side2 && this.side2 === this.side3 && this.side3 === this.side1) {
       return true
     }
+    else { return false }
   }
 
   get isIsosceles() {
@@ -30,6 +31,7 @@ export class Triangle {
        (this.side3 === this.side1 && this.side3 === this.side2)) {
       return true
     }
+    else { return false }
   }
 
   get isScalene() {
@@ -38,6 +40,7 @@ export class Triangle {
        (!this.isIsosceles(this.side1, this.side2, this.side3))) {
       return false
     }
+    else { return true }
   }
 
 }
