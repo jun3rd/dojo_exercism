@@ -3,6 +3,11 @@
 // convenience to get you started writing code faster.
 //
 
+// TEST passed: zero steps
+// TEST passed: divide even
+// TEST passed: even and odd
+
+
 export const steps = (posn) => {
   let st = 0 // steps
   // let maxst = 12 // max steps
