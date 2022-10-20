@@ -4,6 +4,8 @@
 //
 
 // TEST passed: equilateral: all sides equal
+// TEST passed: equilateral: any side unequal
+// TEST passed: equilateral: no side equal
 
 export class Triangle {
 
