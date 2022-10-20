@@ -1,7 +1,7 @@
 import { steps } from './collatz-conjecture';
 
-describe.skip('steps()', () => {
-  xtest('zero steps for one', () => {
+describe('steps()', () => {
+  test('zero steps for one', () => {
     expect(steps(1)).toEqual(0);
   });
 
