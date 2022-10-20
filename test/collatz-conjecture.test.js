@@ -17,7 +17,7 @@ describe('steps()', () => {
     expect(steps(1000000)).toEqual(152);
   });
 
-  xtest('zero is an error', () => {
+  test('zero is an error', () => {
     expect(() => {
       steps(0);
     }).toThrow(new Error('Only positive numbers are allowed'));

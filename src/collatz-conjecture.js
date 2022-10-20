@@ -7,6 +7,7 @@
 // TEST passed: divide even
 // TEST passed: even and odd
 // TEST passed: large number, even and odd
+// TEST passed: zero ERROR
 
 
 export const steps = (posn) => {
