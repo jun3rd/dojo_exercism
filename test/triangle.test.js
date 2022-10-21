@@ -49,7 +49,7 @@ describe('Triangle', () => {
       expect(triangle.isIsosceles).toBe(true);
     });
 
-    xtest('no sides are equal', () => {
+    test('no sides are equal', () => {
       const triangle = new Triangle(2, 3, 4);
       expect(triangle.isIsosceles).toBe(false);
     });

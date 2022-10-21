@@ -12,6 +12,7 @@
 // TEST passed: isosceles: first 2-sides equal
 // TEST passed: isosceles: first and last side equal
 // TEST passed: isosceles: equilateral is isosceles
+// TEST passed: isosceles: no sides equal
 
 
 export class Triangle {
