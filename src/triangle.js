@@ -13,6 +13,7 @@
 // TEST passed: isosceles: first and last side equal
 // TEST passed: isosceles: equilateral is isosceles
 // TEST passed: isosceles: no sides equal
+// TEST passed: isosceles: inequality violation 1
 
 
 export class Triangle {
@@ -47,7 +48,9 @@ export class Triangle {
   get isIsosceles() {
     if (this.checkZero() === false) {
       console.log('checking isosceles')
-      if (this.side1 === this.side2 || this.side2 === this.side3 || this.side3 === this.side1) {
+      if ((this.side1 === this.side2 && this.side1 !== 1) || 
+          (this.side2 === this.side3 && this.side2 !== 1) ||
+          (this.side3 === this.side1 && this.side3 !== 1)) {
         return true
       }
       else { return false }
