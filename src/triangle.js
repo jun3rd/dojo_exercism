@@ -9,6 +9,7 @@
 // TEST passed: zero side not triangle
 // TEST passed: sides may be floats
 // TEST passed: isosceles: last 2-sides equal
+// TEST passed: isosceles: first 2-sides equal
 
 
 export class Triangle {
