@@ -16,7 +16,8 @@
 // TEST passed: isosceles: inequality violation 1
 // TEST passed: isosceles: inequality violation 2
 // TEST passed: isosceles: inequality violation 3
-// TEST passed: floast ok
+// TEST passed: float ok
+// TEST passed: no sides equal
 
 
 export class Triangle {
@@ -64,11 +65,12 @@ export class Triangle {
   get isScalene() {
     if (this.checkZero() === false) {
       console.log('checking scalene')
-      if((!this.isEquilateral(this.side1, this.side2, this.side3)) ||
-         (!this.isIsosceles(this.side1, this.side2, this.side3))) {
-        return false
+      if (this.side1 !== this.side2 && 
+          this.side1 !== this.side3 &&
+          this.side2 !== this.side3) {
+        return true
       }
-      else { return true }
+      else { return false }
     }
     else { return false }
   }
