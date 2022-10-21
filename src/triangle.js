@@ -6,6 +6,7 @@
 // TEST passed: equilateral: all sides equal
 // TEST passed: equilateral: any side unequal
 // TEST passed: equilateral: no side equal
+// TEST passed: zero side not triangle
 
 export class Triangle {
 
@@ -18,31 +19,47 @@ export class Triangle {
     //this.isScalene = this.isScalene.bind(this)
   }
 
-  get isEquilateral() {
-    console.log('checking equilateral')
-    if (this.side1 === this.side2 && this.side2 === this.side3 && this.side3 === this.side1) {
+  checkZero() {
+    if (this.side1 === 0 || this.side2 === 0 || this.side3 === 0) {
       return true
+    }
+    return false
+  }
+
+  get isEquilateral() {
+    if (this.checkZero() === false) {
+      console.log('checking equilateral')
+      if (this.side1 === this.side2 && this.side2 === this.side3 && this.side3 === this.side1) {
+        return true
+      }
+      else { return false }
     }
     else { return false }
   }
 
   get isIsosceles() {
-    console.log('checking isosceles')
-    if((this.side1 === this.side2 && this.side1 === this.side3) ||
-       (this.side2 === this.side3 && this.side2 === this.side1) ||
-       (this.side3 === this.side1 && this.side3 === this.side2)) {
-      return true
+    if (this.checkZero() === false) {
+      console.log('checking isosceles')
+      if((this.side1 === this.side2 && this.side1 === this.side3) ||
+         (this.side2 === this.side3 && this.side2 === this.side1) ||
+         (this.side3 === this.side1 && this.side3 === this.side2)) {
+        return true
+      }
+      else { return false }
     }
     else { return false }
   }
 
   get isScalene() {
-    console.log('checking scalene')
-    if((!this.isEquilateral(this.side1, this.side2, this.side3)) ||
-       (!this.isIsosceles(this.side1, this.side2, this.side3))) {
-      return false
+    if (this.checkZero() === false) {
+      console.log('checking scalene')
+      if((!this.isEquilateral(this.side1, this.side2, this.side3)) ||
+         (!this.isIsosceles(this.side1, this.side2, this.side3))) {
+        return false
+      }
+      else { return true }
     }
-    else { return true }
+    else { return false }
   }
 
 }

@@ -17,7 +17,7 @@ describe('Triangle', () => {
       expect(triangle.isEquilateral).toBe(false);
     });
 
-    xtest('all zero sides is not a triangle', () => {
+    test('all zero sides is not a triangle', () => {
       const triangle = new Triangle(0, 0, 0);
       expect(triangle.isEquilateral).toBe(false);
     });
