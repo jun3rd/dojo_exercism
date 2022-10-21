@@ -14,6 +14,7 @@
 // TEST passed: isosceles: equilateral is isosceles
 // TEST passed: isosceles: no sides equal
 // TEST passed: isosceles: inequality violation 1
+// TEST passed: isosceles: inequality violation 2
 
 
 export class Triangle {
