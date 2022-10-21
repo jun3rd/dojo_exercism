@@ -64,7 +64,7 @@ describe('Triangle', () => {
       expect(triangle.isIsosceles).toBe(false);
     });
 
-    xtest('third triangle inequality violation', () => {
+    test('third triangle inequality violation', () => {
       const triangle = new Triangle(3, 1, 1);
       expect(triangle.isIsosceles).toBe(false);
     });
