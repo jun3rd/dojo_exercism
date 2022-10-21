@@ -16,8 +16,8 @@
 // TEST passed: isosceles: inequality violation 1
 // TEST passed: isosceles: inequality violation 2
 // TEST passed: isosceles: inequality violation 3
-// TEST passed: float ok
-// TEST passed: no sides equal
+// TEST passed: isosceles: float ok
+// TEST passed: scalene: no sides equal
 
 
 export class Triangle {
