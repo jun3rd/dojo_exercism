@@ -28,8 +28,8 @@ describe('Triangle', () => {
     });
   });
 
-  describe.skip('isosceles triangle', () => {
-    xtest('last two sides are equal', () => {
+  describe('isosceles triangle', () => {
+    test('last two sides are equal', () => {
       const triangle = new Triangle(3, 4, 4);
       expect(triangle.isIsosceles).toBe(true);
     });

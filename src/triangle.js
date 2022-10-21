@@ -8,6 +8,7 @@
 // TEST passed: equilateral: no side equal
 // TEST passed: zero side not triangle
 // TEST passed: sides may be floats
+// TEST passed: isosceles: last 2-sides equal
 
 
 export class Triangle {
@@ -42,9 +43,7 @@ export class Triangle {
   get isIsosceles() {
     if (this.checkZero() === false) {
       console.log('checking isosceles')
-      if((this.side1 === this.side2 && this.side1 === this.side3) ||
-         (this.side2 === this.side3 && this.side2 === this.side1) ||
-         (this.side3 === this.side1 && this.side3 === this.side2)) {
+      if (this.side1 === this.side2 || this.side2 === this.side3 || this.side3 === this.side1) {
         return true
       }
       else { return false }
