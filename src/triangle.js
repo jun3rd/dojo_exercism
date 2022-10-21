@@ -7,6 +7,8 @@
 // TEST passed: equilateral: any side unequal
 // TEST passed: equilateral: no side equal
 // TEST passed: zero side not triangle
+// TEST passed: sides may be floats
+
 
 export class Triangle {
 
